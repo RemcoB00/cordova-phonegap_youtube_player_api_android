@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
     id="remcob00-cordova-youtube-android-player-api"
-    version="2.0.4">
+    version="2.0.6">
     
     <name>>Cordova / Phonegap YouTube Android Player API</name>
     <description>Cordova / Phonegap YouTube Android Player API plugin.</description>
