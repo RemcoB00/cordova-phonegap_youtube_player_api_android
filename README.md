@@ -1,43 +1,82 @@
-# Cordova / Phonegap YouTube Android Player API #
-By [Remco Beugels (RemcoB00)](http://twitter.com/remcob00)
+# Cordova / Phonegap YouTube Android Player API plugin
+Developed by [Remco Beugels](http://remcobeugels.com/)
 
-## Installation ##
-* Download the files
-* Place the youtube.js file in your www folder (in the assets folder)
-* Merge the com folder (in the src folder) with your com folder
-* Register the plugin by adding this line to the config.xml file
+## Installation
+### Automatic installation with npm
+* Navigate to the main folder of your Cordova / Phonegap app.
+* Run the following command:
 ```
-<plugin name="YouTube" value="com.remcob00.plugins.youtube.YouTube"/>
+npm install remcob00-cordova-youtube-android-player-api
 ```
-* [Click here](https://developers.google.com/youtube/android/player/downloads/) and download the YouTube Android Player API on Google's site
-* Place the YouTubeAndroidPlayerApi.jar file in your libs folder
-* Register your app and get a api key ([here the instructions from Google](https://developers.google.com/youtube/android/player/register))
-* Place your api key in the YouTube.java file in com.remcob00.plugins.youtube at line 38
+That's all, the plugin is now succesfully added to your app!
+### Manual installation
+* Download the [latest release](https://github.com/RemcoB00/cordova-phonegap_youtube_player_api_android/releases/latest) of this plugin.
+* Download the YouTube Android Player API library [here](https://developers.google.com/youtube/android/player/downloads/) from the Google Developers site.
+* Unzip this file and copy the libs/YouTubeAndroidPlayerApi.jar file to the src/android folder from the plugin.
+* Navigate to the main folder of your Cordova / Phonegap app.
+* Run the following command:
+```
+cordova plugin add /PATH_FROM_THE_PLUGIN_FOLDER
+```
+The plugin is now succesfully manual added to your app!
 
-## How to use ##
-* Add the following line to the head of your html file
+## How to use
+### Setting the api key
+The YouTube Android Player API requires an api key, you can find the instructions to register an api key [here](https://developers.google.com/youtube/android/player/register). You need to set the api key, before you can play a video, with the following JavaScript code:
 ```
-<script type="text/javascript" charset="utf-8" src="youtube.js"></script>
-```
-* To view the video player use this code and add the YouTube video id:
-```
-window.plugins.youtube.show({
-  videoid: "THE_VIDEO"},
-  function() {},
-  function() {}
-);
+window.youtube.init("YOUR_API_KEY");
 ```
 
-## Coming soon ##
-* Playlist support
-* Auto playlist suppoty
+### Play a single video
+You can use the following JavaScript code to play a single YouTube video:
+```
+window.youtube.playVideo("YOUTUBE_VIDEO_ID");
+```
+You can also add the start time in milliseconds (number), auto play (boolean) and lightbox mode (boolean) parameters:
+```
+window.youtube.playVideo("YOUTUBE_VIDEO_ID", START_TIME, AUTO_PLAY, LIGHTBOX_MODE);
+```
 
-## Release notes ##
-### 29-12-12 ###
-* First release by Remco Beugels (RemcoB00)
+### Play a playlist
+You can use the following JavaScript code to play a YouTube playlist:
+```
+window.youtube.playPlaylist("YOUTUBE_PLAYLIST_ID");
+```
+You can also add the start index (number), start time in milliseconds (number), auto play (boolean) and lightbox mode (boolean) parameters:
+```
+window.youtube.playPlaylist("YOUTUBE_PLAYLIST_ID", START_INDEX, START_TIME, AUTO_PLAY, LIGHTBOX_MODE);
+```
 
-## License ##
-Copyright (C) 2012 Remco Beugels
+### Play multiple videos
+You can use the following JavaScript code to play multiple YouTube videos:
+```
+window.youtube.playVideos(["YOUTUBE_VIDEO_ID", "YOUTUBE_VIDEO_ID", "YOUTUBE_VIDEO_ID"]);
+```
+You can also add the start index (number), start time in milliseconds (number), auto play (boolean) and lightbox mode (boolean) parameters:
+```
+window.youtube.playVideos(["YOUTUBE_VIDEO_ID", "YOUTUBE_VIDEO_ID", "YOUTUBE_VIDEO_ID"], START_INDEX, START_TIME, AUTO_PLAY, LIGHTBOX_MODE);
+```
+
+### Example
+You can find a full example of the plugin in `example.html`.
+
+## Changelog
+### 2.0.1 - 2.0.4 (20/06/2015)
+* Npm automatic installation bug fixes.
+
+### 2.0.0 (20/06/2015)
+* Completely rewritten for the newest version of Cordova / Phonegap.
+* Playlist support.
+* Custom start time, auto play and lightbox mode support.
+
+### 1.0.0 (29/12/2012)
+* First release
+
+## Support
+If you want to thank me for developing this plugin you can buy me a coffee via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PYNGRKPD4YTEJ).
+
+## License
+Copyright (C) 2012-2015 Remco Beugels
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
