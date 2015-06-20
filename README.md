@@ -58,10 +58,10 @@ window.youtube.playVideos(["YOUTUBE_VIDEO_ID", "YOUTUBE_VIDEO_ID", "YOUTUBE_VIDE
 ```
 
 ### Example
-You can find a full example of the plugin in `example.html`.
+You can find a full example of the plugin in [example.html](https://github.com/RemcoB00/cordova-phonegap_youtube_player_api_android/blob/master/example.html).
 
 ## Changelog
-#### 2.0.1 - 2.0.4 (20/06/2015)
+#### 2.0.1 - 2.0.6 (20/06/2015)
 * Npm automatic installation bug fixes.
 
 #### 2.0.0 (20/06/2015)
@@ -70,7 +70,7 @@ You can find a full example of the plugin in `example.html`.
 * Custom start time, auto play and lightbox mode support.
 
 #### 1.0.0 (29/12/2012)
-* First release
+* First release.
 
 ## Support
 If you want to thank me for developing this plugin you can buy me a coffee via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PYNGRKPD4YTEJ).
