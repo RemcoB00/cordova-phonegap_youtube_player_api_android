@@ -12,7 +12,7 @@ That's all, the plugin is now succesfully added to your app!
 ### Manual installation
 * Download the [latest release](https://github.com/RemcoB00/cordova-phonegap_youtube_player_api_android/releases/latest) of this plugin.
 * Download the YouTube Android Player API library [here](https://developers.google.com/youtube/android/player/downloads/) from the Google Developers site.
-* Unzip this file and copy the libs/YouTubeAndroidPlayerApi.jar file to the src/android folder from the plugin.
+* Unzip this file and copy the `libs/YouTubeAndroidPlayerApi.jar` file to the `src/android` folder from the plugin.
 * Navigate to the main folder of your Cordova / Phonegap app.
 * Run the following command:
 ```
@@ -61,15 +61,15 @@ window.youtube.playVideos(["YOUTUBE_VIDEO_ID", "YOUTUBE_VIDEO_ID", "YOUTUBE_VIDE
 You can find a full example of the plugin in `example.html`.
 
 ## Changelog
-### 2.0.1 - 2.0.4 (20/06/2015)
+#### 2.0.1 - 2.0.4 (20/06/2015)
 * Npm automatic installation bug fixes.
 
-### 2.0.0 (20/06/2015)
+#### 2.0.0 (20/06/2015)
 * Completely rewritten for the newest version of Cordova / Phonegap.
 * Playlist support.
 * Custom start time, auto play and lightbox mode support.
 
-### 1.0.0 (29/12/2012)
+#### 1.0.0 (29/12/2012)
 * First release
 
 ## Support
