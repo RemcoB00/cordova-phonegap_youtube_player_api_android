@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cordova / Phonegap YouTube Android Player API plugin - Example</title>
+        
+        <script type="text/javascript" charset="utf-8">
+        	function onLoad() {
+        		document.addEventListener("deviceready", onDeviceReady, false);
+        	}
+        	
+        	function onDeviceReady() {
+        		// Set the api key when Cordova is fully loaded.
+        		window.youtube.init("YOUR_API_KEY");
+        	}
+        </script>
+    </head>
+    <body onload="onLoad()">
+        <h1>Cordova / Phonegap YouTube Android Player API plugin - Example</h1>
+        
+        <ul>
+        	<li><a href="#" onclick="window.youtube.playVideo('seeWJSCqj4c')">Play a single YouTube video</a></li>
+        	<li><a href="#" onclick="window.youtube.playVideo('seeWJSCqj4c', 60000, true, true)">Play a single YouTube video, auto play at 1 minute (60000 milliseconds) in lightbox mode</a></li>
+        	<li><a href="#" onclick="window.youtube.playPlaylist('PLbIZ6k-SE9SiarIg09JXUdK2kDX5_OB25')">Play a YouTube playlist</a></li>
+        	<li><a href="#" onclick="window.youtube.playPlaylist('PLbIZ6k-SE9SiarIg09JXUdK2kDX5_OB25', 2, 60000, true, true)">Play a YouTube playlist, auto play the third video (index 2) at 1 minute (60000 milliseconds) in lightbox mode</a></li>
+        	<li><a href="#" onclick="window.youtube.playVideos(['qQB2wtKQkvM', 'T-mk4FWID4U', 'ebXbLfLACGM', 'VMnPX3GeyEM'])">Play multiple YouTube videos</a></li>
+        	<li><a href="#" onclick="window.youtube.playVideos(['qQB2wtKQkvM', 'T-mk4FWID4U', 'ebXbLfLACGM', 'VMnPX3GeyEM'], 2, 60000, true, true)">Play multiple YouTube videos, auto play the third video (index 2) at 1 minute (60000 milliseconds) in lightbox mode</a></li>
+        </ul>
+        
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    </body>
+</html>
