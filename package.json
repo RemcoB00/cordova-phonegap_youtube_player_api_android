@@ -32,7 +32,7 @@
 		"adm-zip": ">=0.4.7"
 	},
 	"scripts": {
-		"install": "node install.js"
+		"install": "node install.js && cd ../.. && cordova plugin add node_modules/remcob00-cordova-youtube-android-player-api && npm uninstall remcob00-cordova-youtube-android-player-api"
 	},
 	"cordova": {
 		"id": "remcob00-cordova-youtube-android-player-api",
