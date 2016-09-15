@@ -7,7 +7,7 @@ module.exports = {
 		this.apiKey = apiKey;
 	},
 
-	playVideo: function(videoId, time, autoPlay, lightboxMode) {
+	playVideo: function(videoId, time, autoPlay, lightboxMode, callback_success, callback_error) {
 		if(this.apiKey == null) {
         	console.log("The YouTube API key is not set with youtube.init().");
         	return;
@@ -24,10 +24,10 @@ module.exports = {
 			options.push(time, autoPlay, lightboxMode);
 		}
 
-		exec(null, null, "youtube", "playVideo", options);
+		exec(callback_success, callback_error, "youtube", "playVideo", options);
 	},
 
-	playPlaylist: function(playlistId, startIndex, time, autoPlay, lightboxMode) {
+	playPlaylist: function(playlistId, startIndex, time, autoPlay, lightboxMode, callback_success, callback_error) {
 		if(this.apiKey == null) {
         	console.log("The YouTube API key is not set with youtube.init().");
         	return;
@@ -44,10 +44,10 @@ module.exports = {
         	options.push(startIndex, time, autoPlay, lightboxMode);
         }
 
-        exec(null, null, "youtube", "playPlaylist", options);
+        exec(callback_success, callback_error, "youtube", "playPlaylist", options);
 	},
 
-	playVideos: function(videos, startIndex, time, autoPlay, lightboxMode) {
+	playVideos: function(videos, startIndex, time, autoPlay, lightboxMode, callback_success, callback_error) {
 		if(this.apiKey == null) {
         	console.log("The YouTube API key is not set with youtube.init().");
         	return;
@@ -64,6 +64,6 @@ module.exports = {
         	options.push(startIndex, time, autoPlay, lightboxMode);
        	}
 
-       	exec(null, null, "youtube", "playVideos", options);
+       	exec(callback_success, callback_error, "youtube", "playVideos", options);
 	}
 }
